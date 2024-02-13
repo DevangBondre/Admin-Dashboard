@@ -1,1 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
 
+
+
+  .container {
+    display: grid;
+    grid-template-columns: 15% 85%; /* Sidebar takes 15%, main content takes 85% */
+    grid-template-rows: repeat(2, 100%); /* Two rows, both taking 100% height */
+    height: 100vh; /* 100% of the viewport height */
+ 
+    background-color: #333;
+  }
+  
+  .sidebar {
+    background-color: aqua;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+    transition: .4s;
+  }
+  
+  .sidebar-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: block;
+    border-top: rgba(255,255,255,1);
+    line-height: 60px;
+    
+  }
+
+  .sidebar > div:hover{
+    padding-left: 30px;
+  }

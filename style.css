@@ -1,27 +1,32 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  background-color: #9ca3af;
 }
 
-.container {
+#container {
   display: grid;
-  grid-template-columns: 15% 85%;
   height: 100vh;
-  background-color: #333;
+  grid-template-columns: 0.7fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+  grid-template-areas:
+    "sidebar navbar navbar navbar"
+    "sidebar navbar2 navbar2 navbar2"
+    "sidebar project1 project2 socials"
+    "sidebar project1 project2 socials"
+    "sidebar project3 project4 socials"
+    "sidebar project3 project4 technology"
+    "sidebar project5 project6 technology"
+    "sidebar project5 project6 technology";
+    
 }
 
-.sidebar {
+#sidebar {
   background-color: aqua;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  color: black;
+  grid-area: sidebar;
   font-weight: bold;
   font-size: 1.3em;
-
 }
-
 .sidebar-item {
   cursor: pointer;
   display: flex;
@@ -44,33 +49,240 @@ body, html {
   color: black; 
 }
 
+
+
 .sidebar-item:hover {
   padding-left: 30px;
 }
 
-.navbar {
+#project2 {
+  grid-area: project2;
+  margin: 10px;
+  background-color: white;
+  border-left: 7px solid #d97706;
+  border-radius: 9px;
+  
+}
+
+#socials {
+  grid-area: socials;
+  background-color: white;
+  margin: 40px;
+  border: 3px solid black;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+#project1 {
+  grid-area: project1;
+  margin: 10px;
+  background-color: white;
+  border-left: 7px solid #d97706;
+  border-radius: 9px;
+  
+}
+
+#project3 {
+  grid-area: project3;
+  background-color: white;
+  margin: 10px;
+  border-left: 7px solid #d97706;
+  border-radius: 9px;
+  
+}
+
+#project4 {
+  grid-area: project4;
+  background-color: white;
+  margin: 10px;
+  border-left: 7px solid #d97706;
+  border-radius: 9px;
+  
+}
+
+#project5 {
+  grid-area: project5;
+  background-color: white;
+  margin: 10px;
+  border-left: 7px solid #d97706;
+  border-radius: 9px;
+
+}
+
+#project6 {
+  grid-area: project6;
+  background-color: white;
+  margin: 10px;
+  border-left: 7px solid #d97706;
+  border-radius: 9px;
+  
+}
+
+
+
+#navbar {
+  grid-area: navbar;
   display: flex;
   align-items: center;
+  padding: 0 10px; 
   background-color: white;
-  height: 10%;
 }
+
+
+
+#technology {
+  grid-area: technology;
+  background-color: white;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  border: 3px solid black;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+
 
 .searchbar {
-  padding-left: 25px;
-  display: flex; 
-  align-items: center; 
-  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  
 }
 
-.searchbar-box {
-  margin-left: 15px; 
+.searchbar-box{
+  background-color: #e2e8f0;
   border: 2px solid black;
-  background-color: #94a3b8;
   border-radius: 12px;
-  width: 450px; 
-  height: 20px;
+  padding: 3px;
+  width: 500px;
+  margin-left: 20px;
+
 }
 
 .notif{
-  margin-left: 120px;
+  margin-left: 100px;
 }
+
+.dp{
+  border-radius: 50%;
+  margin-left: 40px;
+}
+
+h2{
+  margin-left: 30px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.dp2{
+  border-radius: 50%;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+#navbar2{
+  grid-area: navbar2;
+  display: flex;
+  align-items: center;
+  
+  background-color: white;
+}
+
+#hi,#name{
+  margin-left: 15px;
+}
+
+#new,#upload,#share{
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 1em;
+  color: white;
+}
+
+.button{
+  background-color: #38bdf8;
+  height: 35px;
+  width: 100px;
+  margin-left: 40px;
+}
+
+#new{
+  margin-left: 400px;
+}
+
+#technology ul {
+  list-style: none;
+  padding: 0;
+}
+
+#technology li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; 
+}
+
+#technology img {
+  margin-right: 10px; 
+}
+
+#socials ul {
+  list-style: none;
+  padding: 0;
+  
+}
+.link-space {
+  margin-left: 50px;
+}
+
+#socials li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; 
+  
+}
+
+#socials img {
+  margin-right: 10px; 
+}
+
+.twit{
+  margin-left: 8px;
+}
+
+#socials a,
+#technology a ,
+#project1 a ,
+#project2 a ,
+#project3 a ,
+#project4 a ,
+#project5 a ,
+#project6 a {
+  color: black;
+  text-decoration: none; 
+}
+
+#socials a:hover,
+#technology a:hover,
+#project1 a:hover,
+#project2 a:hover, 
+#project3 a:hover, 
+#project4 a:hover, 
+#project5 a:hover, 
+#project6 a:hover {
+  text-decoration: underline; 
+  color: aqua;
+}
+
+.links{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
